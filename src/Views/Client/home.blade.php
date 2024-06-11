@@ -7,19 +7,17 @@
 @section('content')
 <section class="section pb-0">
     <div class="container">
-        @foreach ($products as $product)
         <div class="row">
             <div class="col-lg-4 mb-5">
                 <h2 class="h5 section-title">Editors Pick</h2>
-                
                 <article class="card">
                     <div class="post-slider slider-sm">
-                        <img src="{{asset($product['img_thumbnail'])}}" class="card-img-top" alt="post-thumb">
+                        <img src="{{asset('assets/client/images/post/post-1.jpg')}}" class="card-img-top" alt="post-thumb">
                     </div>
 
                     <div class="card-body">
-                        <h3 class="h4 mb-3"><a class="post-title" href="post-details.html">
-                            {{asset($product['name'])}}</a></h3>
+                        <h3 class="h4 mb-3"><a class="post-title" href="post-details.html">Use apples to give
+                                your bakes caramel and a moist texture</a></h3>
                         <ul class="card-meta list-inline">
                             <li class="list-inline-item">
                                 <a href="author-single.html" class="card-meta-author">
@@ -32,17 +30,21 @@
                             </li>
                             <li class="list-inline-item">
                                 <i class="ti-calendar"></i>14 jan, 2020
-                            </li>   
+                            </li>
+                            <li class="list-inline-item">
+                                <ul class="card-meta-tag list-inline">
+                                    <li class="list-inline-item"><a href="tags.html">Color</a></li>
+                                    <li class="list-inline-item"><a href="tags.html">Recipe</a></li>
+                                    <li class="list-inline-item"><a href="tags.html">Fish</a></li>
+                                </ul>
+                            </li>
                         </ul>
                         <p>It’s no secret that the digital industry is booming. From exciting startups to …</p>
                         <a href="post-details.html" class="btn btn-outline-primary">Read More</a>
                     </div>
                 </article>
-                
-                
-                
             </div>
-            {{-- <div class="col-lg-4 mb-5">
+            <div class="col-lg-4 mb-5">
                 <h2 class="h5 section-title">Trending Post</h2>
 
                 <article class="card mb-4">
@@ -134,15 +136,14 @@
                         <a href="post-details.html" class="btn btn-outline-primary">Read More</a>
                     </div>
                 </article>
-            </div> --}}
-            @endforeach
+            </div>
             <div class="col-12">
                 <div class="border-bottom border-default"></div>
             </div>
         </div>
     </div>
 </section>
-{{-- 
+
 <section class="section-sm">
     <div class="container">
         <div class="row justify-content-center">
@@ -369,5 +370,5 @@
             @include('layouts.navbar.nav')
         </div>
     </div>
-</section> --}}
+</section>
 @endsection
